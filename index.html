@@ -1,29 +1,7 @@
-<!DOCTYPE HTML>
-<!--
-	Eventually by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Eventually by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
-
-		<!-- Header -->
-			<header id="header">
-				<h1>Eventually</h1>
-				<p>A simple template for telling the world when you'll launch<br />
-				your next big thing. Brought to you by <a href="http://html5up.net">HTML5 UP</a>.</p>
-			</header>
-
-				<!-- Give your form a name  -->
+<!-- Give your form a name  -->
 <form name="The Press Pass">
 	<!-- Specify the sheet that you want to store the submissions in -->
-	<input type="hidden" name="sheet_name" value="TPP" />
+	<input type="hidden" name="sheet_name" value="YOUR_SHEET_NAME" />
 	<!-- If this hidden input is not present, it defaults to 'Sheet1' -->
 
 	<input name="email" type="email" placeholder="Email" required />
@@ -31,8 +9,8 @@
 </form>
 
 <script>
-	const scriptURL = 'https://script.google.com/macros/s/AKfycbzNAoxRisWbhwWocdUMwk5MdDGlOpJSbjoh4r5NCj3K_m-FEhN2dNhlykihltMdtQl8CQ/exec'
-	const form = document.forms['TPP']
+	const scriptURL = 'https://script.google.com/macros/s/AKfycbyNMLQ4CX8QD3B7eNvz4wn7ZsVi3Jcdxh31RWhyM_wA2ojbQlKfkg76k5oouL4PUsHFbA/exec'
+	const form = document.forms['The Press Pass']
 
 	form.addEventListener('submit', e => {
 		e.preventDefault()
@@ -42,23 +20,3 @@
 			.catch(error => console.error('Error!', error.message))
 	})
 </script>
-			</form>
-
-		<!-- Footer -->
-			<footer id="footer">
-				<ul class="icons">
-					<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-					<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-					<li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
-				</ul>
-				<ul class="copyright">
-					<li>&copy; Untitled.</li><li>Credits: <a href="http://html5up.net">HTML5 UP</a></li>
-				</ul>
-			</footer>
-
-		<!-- Scripts -->
-			<script src="assets/js/main.js"></script>
-
-	</body>
-</html>
