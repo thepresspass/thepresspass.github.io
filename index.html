@@ -22,8 +22,28 @@
 
 		<!-- Signup Form -->
 			<form id="signup-form" method="post" action="#">
-				<input type="email" name="email" id="email" placeholder="Email Address" />
-				<input type="submit" value="Sign Up" />
+				<!-- Give your form a name  -->
+<form name="The Press Pass">
+	<!-- Specify the sheet that you want to store the submissions in -->
+	<input type="hidden" name="sheet_name" value="YOUR_SHEET_NAME" />
+	<!-- If this hidden input is not present, it defaults to 'Sheet1' -->
+
+	<input name="email" type="email" placeholder="Email" required />
+	<button type="submit">Send</button>
+</form>
+
+<script>
+	const scriptURL = 'https://script.google.com/macros/s/AKfycbzNAoxRisWbhwWocdUMwk5MdDGlOpJSbjoh4r5NCj3K_m-FEhN2dNhlykihltMdtQl8CQ/exec'
+	const form = document.forms['YOUR_FORM_NAME']
+
+	form.addEventListener('submit', e => {
+		e.preventDefault()
+		fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+			.then(response => response.json())
+			.then(response => console.log('Success!', response))
+			.catch(error => console.error('Error!', error.message))
+	})
+</script>
 			</form>
 
 		<!-- Footer -->
