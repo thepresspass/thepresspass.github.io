@@ -1,7 +1,7 @@
 <!-- Give your form a name  -->
-<form name="The Press Pass">
+<form name="The_Press_Pass">
 	<!-- Specify the sheet that you want to store the submissions in -->
-	<input type="hidden" name="The Press Pass" value="The Press Pass" />
+	<input type="hidden" name="The_Press_Pass" value="The_Press_Pass" />
 	<!-- If this hidden input is not present, it defaults to 'Sheet1' -->
 
 	<input name="email" type="email" placeholder="Email" required />
@@ -10,7 +10,7 @@
 
 <script>
 	const scriptURL = 'https://script.google.com/macros/s/AKfycbyhLt4IBZcN09et4dFdrsCOQ8eofPGeZTyaQAQnq6XcqT8GsTKZG22H99DVeY7_0GCPQg/exec'
-	const form = document.forms['The Press Pass']
+	const form = document.forms['The_Press_Pass']
 
 	form.addEventListener('submit', e => {
 		e.preventDefault()
@@ -20,3 +20,4 @@
 			.catch(error => console.error('Error!', error.message))
 	})
 </script>
+
